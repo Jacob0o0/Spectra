@@ -15,36 +15,42 @@
     {% tailwind_css %}
 </head>
 
-<body class="h-screen flex flex-col justify-between" style="background-color: #E8E9FA;">
+<body class="h-screen flex flex-col justify-between" style="background-color: #FFFF;">
 
     <!-- Header del chat -->
-    <header class="p-4 text-white text-center" style="background-color: #cbb9f3;">
-      <h1 class="text-lg font-bold">Chat</h1>
-    </header>
+    <header class="p-4" style="background-color: #E8E9FA;">
+      <div class="flex flex-col items-center">
+        <div class="w-16 h-16 mb-2 relative">
+          <div class="absolute inset-0 bg-white rounded-full overflow-hidden">
+            <img src="{% static 'images/_spectra.png' %}" class="w-full h-full object-cover" alt="Spectra logo">
+          </div>
+        </div>
+        <h1 class="text-sm font-bold text-[#8B5CF6]">Spectra</h1>
+      </div>
+    </header>    
+    
   
     <!-- Contenedor de mensajes -->
     <main class="flex-1 overflow-y-auto p-4">
       <!-- Mensaje enviado por otro usuario -->
       <div class="flex items-start mb-4">
-        <div class="text-gray-900 rounded-lg p-3 max-w-xs" style="background-color: #a889d8;">
+        <div class="text-gray-900 rounded-lg p-3 max-w-xs" style="background-color: #E8E9FA;">
           <p>¡Hola! ¿Cómo estás?</p>
         </div>
       </div>
   
       <!-- Mensaje propio -->
       <div class="flex items-end justify-end mb-4">
-        <div class="text-black rounded-lg p-3 max-w-3xl" style="background-color: #cbb9f3;">
+        <div class="text-white rounded-lg p-3 max-w-3xl" style="background-color: #3d1f68;">
           <p>Explicación:
-            Cabecera (Header): Se define un encabezado simple con el título "Chat".
-            Contenedor de Mensajes (Main): Los mensajes se muestran en burbujas de chat, uno alineado a la izquierda para los mensajes de otros usuarios y otro a la derecha para los propios mensajes.
-            Campo de Entrada y Botón (Footer): Un campo de texto y un botón de envío se colocan en la parte inferior de la pantalla para permitir la entrada del usuario.
+             Un campo de texto y un botón de envío se colocan en la parte inferior de la pantalla para permitir la entrada del usuario.
             Este diseño es responsivo y se ajusta automáticamente a pantallas de distintos tamaños gracias a Tailwind CSS.</p>
         </div>
       </div>
     </main>
   
     <!-- Campo de texto y botón de envío -->
-    <footer class="p-4 flex" style="background-color: #a889d8;">
+    <footer class="p-4 flex" style="background-color: #E8E9FA;">
       <input type="text" placeholder="Escribe un mensaje..." class="flex-1 border rounded-lg p-2 mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       <button class="text-white px-4 py-2 rounded-lg hover:bg-blue-600" style="background-color: #3d1f68;">Enviar</button>
     </footer>
