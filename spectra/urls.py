@@ -20,11 +20,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from spectra.views import chat
+from spectra import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', chat)
+    path('', views.chat),
+    path('send-message/', views.handle_message, name='send_message'),
+    path('top-tracks/<str:artist>/', views.top_tracks_view, name='top_tracks'),
 ]
 
 if settings.DEBUG:

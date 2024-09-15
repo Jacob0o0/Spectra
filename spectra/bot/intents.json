@@ -1,0 +1,549 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hola",
+                "Cómo estás?",
+                "Buenos días",
+                "Buenas tardes",
+                "Hola chatbot",
+                "Hey"
+            ],
+            "responses": [
+                "¡Hola! ¿Cómo puedo ayudarte hoy con música?",
+                "¡Hola! Estoy aquí para responder tus preguntas sobre música.",
+                "¡Saludos! ¿Quieres saber algo de música hoy?"
+            ]
+        },
+        {
+            "tag": "musical_data",
+            "patterns": [
+                "¿Qué es un acorde?",
+                "Explícame qué es una escala musical",
+                "¿Qué es un ritmo en música?",
+                "Cuéntame sobre la tonalidad mayor",
+                "¿Qué es la clave de sol?"
+            ],
+            "responses": [
+                "Un acorde es un conjunto de tres o más notas diferentes que suenan al mismo tiempo.",
+                "Una escala musical es una secuencia de notas ordenadas por tonos y semitonos dentro de una octava.",
+                "El ritmo es la organización del tiempo en música, marcado por la duración de las notas y los silencios.",
+                "La tonalidad mayor es una serie de escalas musicales que tienen un sonido brillante y alegre.",
+                "La clave de sol es un símbolo que indica la posición de la nota 'sol' en el pentagrama."
+            ]
+        },
+        {
+            "tag": "music_history_rock",
+            "patterns": [
+                "Historia del rock",
+                "Háblame sobre el rock",
+                "Cuéntame sobre la evolución del rock",
+                "Orígenes del rock"
+            ],
+            "responses": [
+                "El rock surgió en los años 50, fusionando géneros como el blues y el country. Bandas como The Beatles y The Rolling Stones definieron su evolución en los años 60.",
+                "El rock ha evolucionado desde sus raíces en el blues y el rockabilly hasta convertirse en un género diverso con subgéneros como el punk, el grunge y el metal."
+            ]
+        },
+        {
+            "tag": "music_history_jazz",
+            "patterns": [
+                "Origen del jazz",
+                "Cuéntame sobre la historia del jazz",
+                "Historia del jazz",
+                "Desarrollo del jazz"
+            ],
+            "responses": [
+                "El jazz nació a finales del siglo XIX en Nueva Orleans, combinando el blues, ragtime y elementos africanos. Grandes figuras del jazz incluyen a Louis Armstrong y Duke Ellington.",
+                "El jazz ha evolucionado a través de varios estilos, incluyendo el swing, bebop, cool jazz y jazz fusion."
+            ]
+        },
+        {
+            "tag": "music_history_barroco",
+            "patterns": [
+                "Cuéntame sobre la música barroca",
+                "Historia de la música barroca",
+                "Qué es el barroco en la música",
+                "Evolución de la música barroca"
+            ],
+            "responses": [
+                "La música barroca se desarrolló entre 1600 y 1750, con compositores como Bach, Handel y Vivaldi.",
+                "El periodo barroco es conocido por su complejidad y el uso de ornamentación, con el desarrollo de formas musicales como la fuga y el concierto."
+            ]
+        },
+        {
+            "tag": "music_history_renacimiento",
+            "patterns": [
+                "¿Qué es el renacimiento musical?",
+                "Historia del renacimiento en la música",
+                "Música del renacimiento",
+                "Evolución del renacimiento musical"
+            ],
+            "responses": [
+                "El renacimiento musical (1400-1600) fue una era de exploración, donde la música polifónica floreció y los compositores crearon obras vocales complejas.",
+                "Este periodo se caracteriza por el desarrollo de la armonía y el uso de técnicas como la imitación y el contrapunto."
+            ]
+        },
+        {
+            "tag": "music_history_rnb",
+            "patterns": [
+                "Historia del R&B",
+                "Orígenes del R&B",
+                "Cuéntame sobre el R&B",
+                "Evolución del R&B"
+            ],
+            "responses": [
+                "El R&B (Rhythm and Blues) surgió en los años 40 como una fusión de jazz, blues y gospel. Artistas pioneros incluyen a Ray Charles y Ruth Brown.",
+                "El R&B ha evolucionado desde sus raíces en el blues y el jazz hasta convertirse en un género popular con influencias de hip-hop y soul, con artistas contemporáneos como Beyoncé y Usher."
+            ]
+        },
+        {
+            "tag": "music_history_reggaeton",
+            "patterns": [
+                "Historia del reggaeton",
+                "Orígenes del reggaeton",
+                "Cuéntame sobre el reggaeton",
+                "Evolución del reggaeton"
+            ],
+            "responses": [
+                "El reggaeton tiene sus raíces en Panamá y Puerto Rico en los años 90, fusionando reggaetón con ritmos de hip-hop y dancehall. Artistas clave incluyen a Daddy Yankee y Don Omar.",
+                "El reggaeton ha ganado popularidad globalmente y ha influido en otros géneros, destacando con éxitos en las listas de música internacional."
+            ]
+        },
+        {
+            "tag": "music_history_salsa",
+            "patterns": [
+                "Historia de la salsa",
+                "Orígenes de la salsa",
+                "Cuéntame sobre la salsa",
+                "Evolución de la salsa"
+            ],
+            "responses": [
+                "La salsa se desarrolló en Nueva York en los años 60, con influencias de música cubana y puertorriqueña. Artistas destacados incluyen a Celia Cruz y Héctor Lavoe.",
+                "La salsa combina ritmos africanos y caribeños, y es conocida por su energía y complejas estructuras rítmicas."
+            ]
+        },
+        {
+            "tag": "music_history_pop",
+            "patterns": [
+                "Historia del pop",
+                "Orígenes del pop",
+                "Cuéntame sobre la música pop",
+                "Evolución del pop"
+            ],
+            "responses": [
+                "La música pop comenzó en los años 50 como una forma más accesible de música popular. Artistas como Elvis Presley y Madonna fueron pioneros en el género.",
+                "El pop ha evolucionado para incluir una amplia variedad de estilos y ha influido en la música global, con artistas contemporáneos como Taylor Swift y Ariana Grande."
+            ]
+        },
+        {
+            "tag": "music_history_electronica",
+            "patterns": [
+                "Historia de la música electrónica",
+                "Orígenes de la electrónica",
+                "Cuéntame sobre la electrónica",
+                "Evolución de la música electrónica"
+            ],
+            "responses": [
+                "La música electrónica comenzó en los años 60 y 70 con el desarrollo de sintetizadores y técnicas de producción digital. Artistas pioneros incluyen a Kraftwerk y Jean-Michel Jarre.",
+                "El género ha evolucionado para incluir subgéneros como techno, house y trance, con artistas contemporáneos como Daft Punk y Calvin Harris."
+            ]
+        },
+        {
+            "tag": "music_history_musicales",
+            "patterns": [
+                "Historia de los musicales",
+                "Orígenes de los musicales",
+                "Cuéntame sobre los musicales",
+                "Evolución de los musicales"
+            ],
+            "responses": [
+                "Los musicales combinan teatro, música y danza, y tienen sus raíces en operetas y comedias musicales del siglo XIX. Broadway en Nueva York es un centro clave para el género.",
+                "Musicales famosos incluyen 'The Phantom of the Opera', 'Hamilton' y 'The Sound of Music'."
+            ]
+        },
+        {
+            "tag": "music_history_breakcore",
+            "patterns": [
+                "Historia del breakcore",
+                "Orígenes del breakcore",
+                "Cuéntame sobre el breakcore",
+                "Evolución del breakcore"
+            ],
+            "responses": [
+                "El breakcore es un subgénero de la música electrónica que emergió en los años 90, caracterizado por su ritmo acelerado y el uso de samples de breakbeat. Artistas destacados incluyen a Venetian Snares y Alec Empire.",
+                "El breakcore fusiona elementos de drum and bass, hardcore y noise, creando un sonido único y experimental."
+            ]
+        },
+        {
+            "tag": "curious_facts",
+            "patterns": [
+                "Dime un dato curioso de la música",
+                "¿Sabías algo interesante sobre algún compositor?",
+                "Dime algo que no sepa de música",
+                "Curiosidades sobre la música"
+            ],
+            "responses": [
+                "¿Sabías que la canción 'Happy Birthday' es una de las canciones más reconocidas en el mundo y está protegida por derechos de autor?",
+                "El compositor Ludwig van Beethoven siguió componiendo incluso después de quedarse completamente sordo.",
+                "El piano tiene 88 teclas, pero originalmente tenía 85.",
+                "La guitarra eléctrica fue inventada en 1931 por George Beauchamp.",
+                "La canción más larga jamás grabada dura 13 horas y es 'The Rise and Fall of Bossanova' de PC III."
+            ]
+        },
+        {
+            "tag": "music_recommendations",
+            "patterns": [
+                "Recomiéndame música",
+                "¿Qué música debería escuchar?",
+                "Recomendaciones de música",
+                "Dame una recomendación musical"
+            ],
+            "responses": [
+                "Si te gusta el rock, podrías escuchar a Led Zeppelin o Pink Floyd.",
+                "Para jazz, te recomiendo a Miles Davis o John Coltrane.",
+                "Si te gusta el pop, prueba con Taylor Swift o Dua Lipa.",
+                "Para música clásica, Ludwig van Beethoven y Wolfgang Amadeus Mozart son esenciales.",
+                "Si te gusta la música electrónica, escucha a Daft Punk o The Chemical Brothers."
+            ]
+        },
+        {
+            "tag": "recommendations_rock",
+            "patterns": [
+                "Recomiéndame música rock",
+                "Bandas de rock",
+                "Artistas de rock",
+                "Música rock para escuchar"
+            ],
+            "responses": [
+                "Para rock, te recomiendo escuchar a Queen, Nirvana o AC/DC.",
+                "Otras bandas destacadas son Led Zeppelin, Pink Floyd y The Rolling Stones.",
+                "Si te interesa el rock alternativo, puedes probar con Radiohead, Foo Fighters o Muse."
+            ]
+        },
+        {
+            "tag": "recommendations_jazz",
+            "patterns": [
+                "¿Qué bandas de jazz puedo escuchar?",
+                "Recomiéndame jazz",
+                "Artistas de jazz",
+                "Música jazz para escuchar"
+            ],
+            "responses": [
+                "Si te interesa el jazz, te sugiero a Ella Fitzgerald, Charles Mingus o Thelonious Monk.",
+                "Otros grandes artistas de jazz incluyen a Miles Davis, John Coltrane y Duke Ellington.",
+                "Para jazz moderno, puedes explorar a Kamasi Washington o Esperanza Spalding."
+            ]
+        },
+        {
+            "tag": "recommendations_pop",
+            "patterns": [
+                "Dame recomendaciones de pop",
+                "Recomiéndame música pop",
+                "Artistas de pop",
+                "Música pop para escuchar"
+            ],
+            "responses": [
+                "En el pop, artistas como Ariana Grande, The Weeknd y Katy Perry son muy populares.",
+                "Otras recomendaciones incluyen a Billie Eilish, Dua Lipa y Bruno Mars.",
+                "Si te gusta el pop clásico, puedes escuchar a Madonna, Michael Jackson y Prince."
+            ]
+        },
+        {
+            "tag": "recommendations_classical",
+            "patterns": [
+                "¿Qué música clásica debo escuchar?",
+                "Recomiéndame música clásica",
+                "Artistas de música clásica",
+                "Música clásica para escuchar"
+            ],
+            "responses": [
+                "Si te gusta la música clásica, podrías escuchar a Johann Sebastian Bach, Ludwig van Beethoven o Franz Schubert.",
+                "Otros compositores notables son Wolfgang Amadeus Mozart, Pyotr Ilyich Tchaikovsky y Frederic Chopin.",
+                "Para música clásica moderna, puedes explorar a Philip Glass o Steve Reich."
+            ]
+        },
+        {
+            "tag": "recommendations_electronic",
+            "patterns": [
+                "Recomendaciones de música electrónica",
+                "Recomiéndame electrónica",
+                "Artistas de electrónica",
+                "Música electrónica para escuchar"
+            ],
+            "responses": [
+                "Para música electrónica, dale una oportunidad a Avicii, Calvin Harris o Deadmau5.",
+                "Otros artistas influyentes en la electrónica son Daft Punk, Skrillex y Marshmello.",
+                "Si buscas algo más experimental, prueba con Aphex Twin o Boards of Canada."
+            ]
+        },
+        {
+            "tag": "recommendations_rnb",
+            "patterns": [
+                "Sugerencias de R&B",
+                "Recomiéndame R&B",
+                "Artistas de R&B",
+                "Música R&B para escuchar"
+            ],
+            "responses": [
+                "Si te gusta el R&B, te recomiendo a Beyoncé, Usher o Alicia Keys.",
+                "Otros artistas destacados en R&B son Marvin Gaye, Mary J. Blige y Frank Ocean.",
+                "Para una mezcla de R&B y soul, prueba con D'Angelo o Erykah Badu."
+            ]
+        },
+        {
+            "tag": "recommendations_alternative",
+            "patterns": [
+                "¿Qué música alternativa me recomiendas?",
+                "Recomiéndame música alternativa",
+                "Artistas de música alternativa",
+                "Música alternativa para escuchar"
+            ],
+            "responses": [
+                "Para música alternativa, puedes escuchar a Radiohead, Arctic Monkeys o Tame Impala.",
+                "Otras recomendaciones incluyen a The National, Yeah Yeah Yeahs y Vampire Weekend.",
+                "Si te interesa el indie rock, prueba con Fleet Foxes o Bon Iver."
+            ]
+        },
+        {
+            "tag": "recommendations_latina",
+            "patterns": [
+                "Recomiéndame música latina",
+                "Artistas latinos",
+                "Música latina para escuchar",
+                "Recomendaciones de música latina"
+            ],
+            "responses": [
+                "¡La música latina es muy rica y diversa! ¿Prefieres reggaeton, salsa o bachata? Te puedo recomendar a artistas como Bad Bunny, Marc Anthony o Romeo Santos.",
+                "Para reggaeton, escucha a Daddy Yankee, J Balvin o Karol G.",
+                "Si te gusta la salsa, prueba con Héctor Lavoe, Willie Colón o Rubén Blades.",
+                "En bachata, puedes disfrutar de Aventura, Romeo Santos o Toby Love."
+            ]
+        },
+        {
+            "tag": "recommendations_reggaeton",
+            "patterns": [
+                "¿Qué artistas de reggaeton me recomiendas?",
+                "Recomiéndame reggaeton",
+                "Música de reggaeton",
+                "Artistas de reggaeton"
+            ],
+            "responses": [
+                "Si buscas reggaeton, te recomiendo escuchar a Daddy Yankee, J Balvin o Karol G.",
+                "Otros artistas de reggaeton notables son Ozuna, Anuel AA y Nicky Jam.",
+                "Para álbumes destacados, prueba con 'Vicious' de J Balvin o 'YHLQMDLG' de Bad Bunny."
+            ]
+        },
+        {
+            "tag": "recommendations_salsa",
+            "patterns": [
+                "Quiero escuchar salsa",
+                "Recomiéndame salsa",
+                "Artistas de salsa",
+                "Música salsa para escuchar"
+            ],
+            "responses": [
+                "Para salsa, te sugiero a Héctor Lavoe, Willie Colón o Rubén Blades.",
+                "Otros artistas clásicos de salsa son Celia Cruz y El Gran Combo de Puerto Rico.",
+                "Si buscas salsa moderna, prueba con Marc Anthony o Gilberto Santa Rosa."
+            ]
+        },
+        {
+            "tag": "recommendations_bachata",
+            "patterns": [
+                "¿Qué artistas de bachata puedo escuchar?",
+                "Recomiéndame bachata",
+                "Música de bachata",
+                "Artistas de bachata"
+            ],
+            "responses": [
+                "En bachata, puedes disfrutar de Aventura, Romeo Santos o Toby Love.",
+                "Otros artistas destacados en bachata son Frank Reyes y Xtreme.",
+                "Para álbumes recomendados, prueba con 'Formula, Vol. 2' de Romeo Santos o 'The Last' de Aventura."
+            ]
+        },
+        {
+            "tag": "recommendations_lofi",
+            "patterns": [
+                "Música para relajarme",
+                "Recomiéndame lo-fi",
+                "Artistas de lo-fi",
+                "Música lo-fi para escuchar"
+            ],
+            "responses": [
+                "Si quieres relajarte, te recomiendo explorar el género lo-fi o ambient. Artistas como Chillhop Essentials y Study Music tienen playlists perfectas para eso.",
+                "Otros artistas de lo-fi incluyen a Nujabes, J Dilla y Tomppabeats.",
+                "Para playlists relajantes, prueba con 'Lo-Fi Beats' en Spotify o 'Lofi Hip Hop Radio' en YouTube."
+            ]
+        },
+        {
+            "tag": "recommendations_chillout",
+            "patterns": [
+                "Necesito algo para concentrarme",
+                "Recomiéndame chillout",
+                "Artistas de chillout",
+                "Música chillout para escuchar"
+            ],
+            "responses": [
+                "Para concentrarte, la música instrumental o el chillout pueden ser muy útiles. Intenta con artistas como Tycho o Moby.",
+                "Otros artistas chillout recomendados son Bonobo, Emancipator y Boards of Canada.",
+                "Para playlists de concentración, prueba con 'Chill Study Beats' en Spotify o 'Ambient Study Beats' en YouTube."
+            ]
+        },
+        {
+            "tag": "recommendations_dance",
+            "patterns": [
+                "Música para animarme",
+                "Recomiéndame dance",
+                "Artistas de dance",
+                "Música dance para escuchar"
+            ],
+            "responses": [
+                "Si necesitas música para animarte, el dance o el pop son excelentes opciones. Artistas como Dua Lipa, Calvin Harris o David Guetta son ideales para eso.",
+                "Otros artistas de dance recomendados son Avicii, Zedd y The Chainsmokers.",
+                "Para playlists energéticas, prueba con 'Dance Hits' en Spotify o 'Dance Music' en YouTube."
+            ]
+        },
+        {
+            "tag": "recommendations_party",
+            "patterns": [
+                "Recomendaciones para una fiesta",
+                "Música para fiesta",
+                "Recomiéndame música para una fiesta",
+                "Artistas para una fiesta"
+            ],
+            "responses": [
+                "Para una fiesta, no puedes equivocarte con música dance, reggaeton o pop. Prueba con hits de artistas como Shakira, Pitbull o DJ Snake.",
+                "Otros artistas para fiestas incluyen a Major Lazer, Luis Fonsi y Marshmello.",
+                "Para playlists de fiesta, prueba con 'Party Hits' en Spotify o 'Dance Party' en YouTube."
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Adiós",
+                "Nos vemos",
+                "Hasta luego",
+                "Chao",
+                "Gracias, adiós"
+            ],
+            "responses": [
+                "¡Adiós! No dudes en volver si quieres hablar más de música.",
+                "¡Hasta luego! Estaré aquí si necesitas más recomendaciones.",
+                "¡Chao! Que disfrutes de la música.",
+                "Nos vemos pronto, ¡mantén la música viva!"
+            ]
+        },
+        {
+            "tag": "music_emotions_jazz",
+            "patterns": [
+                "¿Cómo afecta el jazz a las emociones?",
+                "¿Qué emociones transmite el jazz?"
+            ],
+            "responses": [
+                "El jazz puede inducir una gama amplia de emociones, desde la euforia hasta la introspección, gracias a su improvisación y ritmo complejo.",
+                "El jazz a menudo provoca sentimientos de alegría y libertad, así como una profunda conexión emocional debido a su naturaleza improvisada."
+            ]
+        },
+        {
+            "tag": "music_emotions_reggaeton",
+            "patterns": [
+                "¿Qué emociones transmite el reguetón?",
+                "¿Cómo afecta el reguetón al estado de ánimo?"
+            ],
+            "responses": [
+                "El reguetón a menudo transmite sensaciones de energía y celebración, con ritmos que pueden hacerte sentir más animado y positivo.",
+                "Escuchar reguetón puede levantar el ánimo y motivar a bailar, creando una sensación de alegría y diversión."
+            ]
+        },
+        {
+            "tag": "music_emotions_pop",
+            "patterns": [
+                "¿Cómo el pop influye en el estado de ánimo?",
+                "¿Qué emociones puede evocar la música pop?"
+            ],
+            "responses": [
+                "La música pop puede influir en el estado de ánimo de manera variada, desde la elevación con ritmos alegres hasta la introspección con baladas melódicas.",
+                "El pop puede evocar una gama de emociones, desde la felicidad y la energía hasta la melancolía y la reflexión, dependiendo de la canción."
+            ]
+        },
+        {
+            "tag": "music_emotions_rock",
+            "patterns": [
+                "¿Qué sentimientos evoca el rock?",
+                "¿Cómo afecta el rock a las emociones?"
+            ],
+            "responses": [
+                "El rock, con su energía y poder, puede levantar el ánimo y proporcionar una forma de liberación emocional, a menudo ayudando a procesar sentimientos intensos.",
+                "El rock puede inducir emociones intensas y poderosas, desde la excitación y la motivación hasta la tristeza y la reflexión, según la subcultura del género."
+            ]
+        },
+        {
+            "tag": "music_emotions_classical",
+            "patterns": [
+                "¿Qué emociones puede causar la música clásica?",
+                "¿Cómo afecta la música clásica a las emociones?"
+            ],
+            "responses": [
+                "La música clásica tiene la capacidad de evocar una amplia gama de emociones, desde la calma y la paz hasta la intensidad y el drama, dependiendo de la pieza y el compositor.",
+                "La música clásica puede inducir sentimientos de tranquilidad y reflexión, así como de emoción y profundidad, dependiendo de la obra que se escuche."
+            ]
+        },
+        {
+            "tag": "myths_in_music_jazz",
+            "patterns": [
+              "¿Cuáles son algunos mitos sobre el jazz?",
+              "Dime un mito sobre los músicos de jazz"
+            ],
+            "responses": [
+              "Un mito común sobre el jazz es que solo es para músicos experimentados. En realidad, el jazz es accesible para todos y puede ser disfrutado en diversos niveles.",
+              "Se cree erróneamente que el jazz es solo para los 'elegidos'. Sin embargo, el jazz puede ser disfrutado y comprendido por cualquier persona interesada en la música."
+            ]
+        },
+        {
+            "tag": "myths_in_music_reggaeton",
+            "patterns": [
+              "¿Qué mitos existen sobre el reguetón?",
+              "Dime un mito sobre el reguetón"
+            ],
+            "responses": [
+              "Un mito sobre el reguetón es que solo promueve comportamientos negativos. En realidad, también puede transmitir mensajes positivos y de celebración.",
+              "Se piensa que el reguetón no tiene valor artístico. Sin embargo, muchos artistas de reguetón son talentosos y contribuyen significativamente a la música moderna."
+            ]
+        },
+        {
+            "tag": "myths_in_music_pop",
+            "patterns": [
+              "¿Cuáles son los mitos sobre el pop?",
+              "Dime un mito sobre la música pop"
+            ],
+            "responses": [
+              "Un mito común sobre el pop es que es solo música comercial y superficial. En realidad, muchos artistas de pop incorporan mensajes profundos y variados en sus canciones.",
+              "Se cree que el pop es solo para jóvenes. Sin embargo, el pop es un género versátil que atrae a personas de todas las edades."
+            ]
+        },
+        {
+            "tag": "myths_in_music_rock",
+            "patterns": [
+              "¿Qué mitos hay sobre el rock?",
+              "Dime un mito sobre los músicos de rock"
+            ],
+            "responses": [
+              "Es un mito que el rock es siempre agresivo y destructivo. De hecho, el rock incluye una amplia gama de estilos, desde baladas suaves hasta sonidos más duros.",
+              "Se piensa que todos los músicos de rock llevan un estilo de vida descontrolado. En realidad, muchos son profesionales dedicados y trabajadores."
+            ]
+        },
+        {
+            "tag": "myths_in_music_classical",
+            "patterns": [
+              "¿Cuáles son algunos mitos sobre la música clásica?",
+              "Dime un mito sobre la música clásica"
+            ],
+            "responses": [
+              "Un mito común sobre la música clásica es que es solo para personas mayores. En realidad, la música clásica tiene un amplio rango de admiradores de todas las edades.",
+              "Se cree que la música clásica es aburrida. Sin embargo, la música clásica ofrece una rica variedad de estilos y emociones que pueden ser muy envolventes."
+            ]
+        }
+    ]
+}
