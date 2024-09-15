@@ -27,7 +27,31 @@
 
     <!-- Contenedor de mensajes -->
     <main class="flex flex-col overflow-y-auto p-4 items-center flex-grow w-full">
-      <div id="chat-container" class="max-w-5xl w-full"></div>
+      <div id="chat-container" class="max-w-5xl w-full">
+        <!-- <div class="flex items-start mb-4 space-x-3">
+            <div>
+                <img class="w-full h-full object-cover rounded-full" src="{% static 'images/_spectra.png' %}" alt="spectra">
+            </div>
+            <div class="flex flex-col space-y-3">
+                <div class="text-gray-900 rounded-lg p-3 max-w-xs" style="background-color: #E8E9FA;">
+                    <p>Este es un ejemplo</p>
+                </div>
+                <div id="show_artist" class="rounded-lg p-3 space-y-3 max-w-xs">
+                    <p class="font-bold">Recomendaciones de Miles Davis:</p>
+                    <img class="rounded-lg max-h-50 object-cover" src="https://i.scdn.co/image/423e826b3c1b23930a255d7cbc2daf733f795507" alt="">
+                </div>
+                <div id="song" class="rounded-lg p-3 space-y-3 max-w-xs" style="background-color: #E8E9FA;">
+                    <div class="flex space-x-3 overflow-hidden">
+                        <img class="rounded-lg w-10 h-10 object-cover" src="https://i.scdn.co/image/ab67616d0000b2737ab89c25093ea3787b1995b4" alt="">
+                        <div class="flex flex-col font-semibold h-10">
+                            <p class="truncate">Blue in Green (feat. John Coltrane & Bill Evans)</p>
+                            <p class="font-thin text-sm">King Of Blue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+      </div>
     </main>
 
     <!-- Campo de texto y botón de envío -->
@@ -112,6 +136,9 @@
               imgSpectra.alt = "spectra";
 
               imgSpectraDiv.appendChild(imgSpectra);
+
+              const messagesContainer = document.createElement('div');
+              messagesContainer.className = 'flex flex-col space-y-3';
       
               // Crear el div del mensaje propio
               const messageContent = document.createElement('div');
@@ -125,7 +152,9 @@
               // Insertar el texto dentro del div del mensaje
               messageDiv.appendChild(imgSpectraDiv)
               messageContent.appendChild(messageText);
-              messageDiv.appendChild(messageContent);
+
+              messagesContainer.appendChild(messageContent)
+              messageDiv.appendChild(messagesContainer);
       
               // Agregar el nuevo mensaje al contenedor del chat
               document.getElementById('chat-container').appendChild(messageDiv);
@@ -136,13 +165,71 @@
               // Hacer scroll hacia el último mensaje añadido
               messageDiv.scrollIntoView({ behavior: 'smooth' });
 
-              artist = "Shakira"
-
               // Llamar a la API de Spotify para obtener las canciones más escuchadas del género
               fetch(`/top-tracks/${encodeURIComponent(data.respuesta_bot)}/`)
                 .then(response => response.json())
                 .then(tracksData => {
-                    console.log(tracksData)
+                    const show_artist = document.createElement('div');
+                    show_artist.className = 'rounded-lg p-3 space-y-3 max-w-xs';
+
+                    const text_recomendation = document.createElement('p');
+                    text_recomendation.className = 'font-bold';
+                    text_recomendation.innerText = 'Recomendaciones de '+tracksData.tracks.name_artist;
+
+                    const artist_img = document.createElement('img');
+                    artist_img.className = 'rounded-lg max-h-50 object-cover';
+                    artist_img.src = tracksData.tracks.img_artist;
+
+                    show_artist.appendChild(text_recomendation);
+                    show_artist.appendChild(artist_img);
+
+                    // Agregar la información del artista al contenedor
+                    messagesContainer.appendChild(show_artist);
+
+                    console.log(tracksData.tracks.tracks)
+                    // Recorrer las 3 primeras canciones
+                    for (let i = 0; i < Math.min(3, tracksData.tracks.tracks.length); i++) {
+                        const song = document.createElement('div');
+                        song.className = 'rounded-lg p-3 space-y-3 max-w-xs';
+                        song.style.backgroundColor = '#E8E9FA';
+
+                        // Añadir un evento onclick para redirigir a la URL de la canción
+                        song.onclick = function() {
+                            window.location.href = tracksData.tracks.tracks[i].uri; // La URL de la canción
+                        };
+
+                        const container_info = document.createElement('div');
+                        container_info.className = 'flex space-x-3 overflow-hidden';
+
+                        const img_song = document.createElement('img');
+                        img_song.className = 'rounded-lg w-10 h-10 object-cover';
+                        img_song.src = tracksData.tracks.tracks[i].album_img;  // Agregar la imagen del álbum
+
+                        const info_song = document.createElement('div');
+                        info_song.className = 'flex flex-col font-semibold h-10';
+
+                        const song_title = document.createElement('p');
+                        song_title.className = 'truncate';
+                        song_title.innerText = tracksData.tracks.tracks[i].track_name;  // Nombre de la canción
+
+                        const album_title = document.createElement('p');
+                        album_title.className = 'font-thin text-sm truncate';
+                        album_title.innerText = tracksData.tracks.tracks[i].album_name;  // Nombre del álbum
+
+                        info_song.appendChild(song_title);
+                        info_song.appendChild(album_title);
+
+                        container_info.appendChild(img_song);
+                        container_info.appendChild(info_song);
+
+                        song.appendChild(container_info);
+
+                        // Agregar el nuevo mensaje al contenedor del chat
+                        messagesContainer.appendChild(song);
+
+                        // Hacer scroll hacia el último mensaje añadido
+                        song.scrollIntoView({ behavior: 'smooth' });
+                    }
                 })
                 .catch(error => {
                     console.error('Error fetching tracks:', error);
