@@ -11,21 +11,22 @@ Ramírez Máximo Abraham Santiago
 Spectra es un chatbot de música inteligente diseñado para brindar a los usuarios una experiencia musical personalizada. Al conectarse con la API de Spotify, Spectra puede ofrecer recomendaciones de canciones, datos curiosos sobre artistas y géneros musicales, así como un breve recorrido histórico de diversos géneros.
 
 ## Funcionalidades principales
-Recomendaciones personalizadas: Spectra utiliza la API de Spotify para sugerir las canciones más populares de un artista específico.
-Datos curiosos: Ofrece información interesante sobre artistas, géneros y canciones.
-Historia de géneros musicales: Proporciona una breve introducción a la historia de diversos géneros musicales.
-Interfaz conversacional: Permite a los usuarios interactuar de forma natural a través de un chat.
-Cómo funciona
-Entrada del usuario: El usuario ingresa una consulta relacionada con la música (por ejemplo, "recomiéndame canciones de R&B", "¿cuál es la historia del rock?").
-Procesamiento de la consulta: Spectra analiza la consulta y determina la intención del usuario.
-Búsqueda de información: Spectra utiliza un modelo de aprendizaje para detectar e interpretar con cierta probabilidad la solicitud del usuario.
-Generación de respuesta: Spectra genera una respuesta coherente y relevante basada en la información recolectada.
-Presentación de la respuesta: La respuesta se presenta al usuario en un formato fácil de entender.
+- Recomendaciones personalizadas: Spectra utiliza la API de Spotify para sugerir las canciones más populares de un artista específico.
+- Datos curiosos: Ofrece información interesante sobre artistas, géneros y canciones.
+- Historia de géneros musicales: Proporciona una breve introducción a la historia de diversos géneros musicales.
+- Interfaz conversacional: Permite a los usuarios interactuar de forma natural a través de un chat.
+
+## Cómo funciona
+- Entrada del usuario: El usuario ingresa una consulta relacionada con la música (por ejemplo, "recomiéndame canciones de R&B", "¿cuál es la historia del rock?").
+- Procesamiento de la consulta: Spectra analiza la consulta y determina la intención del usuario.
+- Búsqueda de información: Spectra utiliza un modelo de aprendizaje para detectar e interpretar con cierta probabilidad la solicitud del usuario.
+- Generación de respuesta: Spectra genera una respuesta coherente y relevante basada en la información recolectada.
+- Presentación de la respuesta: La respuesta se presenta al usuario en un formato fácil de entender.
 
 ## Tecnologías utilizadas:
-Lenguaje principal: Python
-Frameworks: Django para la creación de la vista web, Keras, Tensorflow y NLTK para el modelo de predicción.
-Spotify Web API: Para obtener información sobre artistas, canciones y recomendaciones.
+- Lenguaje principal: Python
+- Frameworks: Django para la creación de la vista web, Keras, Tensorflow y NLTK para el modelo de predicción.
+- Spotify Web API: Para obtener información sobre artistas, canciones y recomendaciones.
 
 ## Instrucciones para ejecutar:
 
