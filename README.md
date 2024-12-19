@@ -1,4 +1,4 @@
-# Juego de Serpientes y Escaleras
+# Spectra
 
 ### Trabajo realizado por:
 Escorcia Alcantara Gregorio Jacobo
